@@ -87,6 +87,10 @@ public class Hero {
         return buffs;
     }
 
+    public void setCoins(int coins) {
+        this.coins = coins;
+    }
+
     public Hero(String name, Sex sex, int strength, int stamina, int dexterity, int intelligence, int wisdom, int charisma) {
         int maleBonus = sex == Sex.MALE ? 10 : 0;
         int femaleBonus = sex == Sex.FEMALE ? 10 : 0;
