@@ -1,6 +1,30 @@
 package ao;
 
 public class Hero {
+    /**
+     * Singleton class because only one hero builder can exist
+     * @author Artur Olejniczak
+     * @version 1.0
+     */
+
+
+    private static Hero single_instanceHero = null;
+    public String message;
+
+    private Hero(){
+
+    }
+
+    public static Hero getInstance(){
+        if(single_instanceHero ==null){
+            single_instanceHero =new Hero();
+        }else {
+            System.out.println("only one instance!");
+        }
+        return single_instanceHero;
+    }
+
+
     //statistics given by player
     private String name = "unnamed_hero";
     private Sex sex = Sex.MALE;
@@ -91,7 +115,7 @@ public class Hero {
         this.coins = coins;
     }
 
-    public Hero(String name, Sex sex, int strength, int stamina, int dexterity, int intelligence, int wisdom, int charisma) {
+    public void calculateCharacterStatistic(String name, Sex sex, int strength, int stamina, int dexterity, int intelligence, int wisdom, int charisma) {
         int maleBonus = sex == Sex.MALE ? 10 : 0;
         int femaleBonus = sex == Sex.FEMALE ? 10 : 0;
         int otherBonus = sex == Sex.OTHER ? 10 : 0;
@@ -111,7 +135,5 @@ public class Hero {
 
         this.health = strength * 0.5f + stamina * 0.2f + dexterity * 0.1f;
         this.mana = intelligence * 0.5f + wisdom + stamina * 0.1f;
-
-        this.coins = 0;
     }
 }
