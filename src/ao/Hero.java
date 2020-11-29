@@ -88,16 +88,31 @@ public class Hero {
         return buffs;
     }
 
-    public void calculateCharacterStatistic(String name, Sex sex, int strength, int stamina, int dexterity, int intelligence, int wisdom, int charisma) {
-
-    }
     /**
      * Singleton class because only one hero builder can exist
      */
-
     private static Hero single_instanceHero = null;
 
     private Hero(String name, Sex sex, int strength, int stamina, int dexterity, int intelligence, int wisdom, int charisma) {
+        int maleBonus = sex == Sex.MALE ? 10 : 0;
+        int femaleBonus = sex == Sex.FEMALE ? 10 : 0;
+        int otherBonus = sex == Sex.OTHER ? 10 : 0;
+
+        this.name = name;
+        this.sex = sex;
+        this.strength = strength + maleBonus;
+        this.stamina = stamina + maleBonus;
+        this.dexterity = dexterity + femaleBonus;
+        this.intelligence = intelligence + femaleBonus;
+        this.wisdom = wisdom + otherBonus;
+        this.charisma = charisma + otherBonus;
+
+        this.baseDamage = strength * 0.1f;
+        this.baseBlock = dexterity * 0.1f;
+        this.movementSpeed = stamina * 0.1f;
+
+        this.health = strength * 0.5f + stamina * 0.2f + dexterity * 0.1f;
+        this.mana = intelligence * 0.5f + wisdom + stamina * 0.1f;
 
     }
 

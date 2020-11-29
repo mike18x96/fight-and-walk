@@ -3,14 +3,13 @@ package ao;
 public class Board{
 
     static void printBoardWithOutEnemy() {
-    ›
 
         Hero.getInstance();
         EnemyBuilder enemy = new EnemyBuilder();
         Enemy chooseEnemy = null;
 
 
-        switch (1) {
+        switch (4) {
             case 1:
                 chooseEnemy = enemy.enemyViper;
                 break;
@@ -28,26 +27,26 @@ public class Board{
 
         System.out.println(">>>>>>>10|>>>>>>>20|>>>>>>>30|>>>>>>>40|>>>>>>>50|>>>>>>>60|>>>>>>>70|>>>>>>>80|>>>>>>>90|>>>>>>100|>>>>>>110|>>>>>>120|");
         System.out.printf("%65s ", "Fight & Walk");
-        System.out.printf("\n%s %87s", "+ - - - - - - - - - - - - - - - +", "+ - - - - - - - - - - - - - - - +\n");
-        System.out.printf("|%10sYour HERO%12s|%54s|%9sYour Opponent%9s|\n","","","","","");
-        System.out.printf("%s %-17s %s %-9s %s","|","name",":",Hero.getInstance().getName(),"|");                   System.out.printf("%55s %-17s %s %-9s %s \n","|","name",":",chooseEnemy.getName(),"|");
-        System.out.printf("%s %-17s %s %-9s %s","|","sex",":",Hero.getInstance().getSex(),"|");                     System.out.printf("%55s %-17s %s %-9s %s \n","|","sex",":",chooseEnemy.getSex(),"|");
-        System.out.printf("%s %-17s %s %-9s %s","|","health",":",Hero.getInstance().getHealth(),"|");               System.out.printf("%55s %-17s %s %-9s %s \n","|","health",":",chooseEnemy.getHealth(),"|");
-        System.out.printf("%s %-17s %s %-9s %s","|","mana",":",Hero.getInstance().getMana(),"|");                   System.out.printf("%55s %-17s %s %-9s %s \n","|","mana",":", chooseEnemy.getMana(),"|");
-        System.out.printf("%s %87s", "+ - - - - - STATS - - - - - - - +", "+ - - - - - STATS - - - - - - - +\n");
-        System.out.printf("%s %-17s %s %-9s %s","|","strength",":",Hero.getInstance().getStrength(),"|");           System.out.printf("%55s %-17s %s %-9s %s \n","|","strength",":",chooseEnemy.getStrength(),"|");
-        System.out.printf("%s %-17s %s %-9s %s","|","stamina",":",Hero.getInstance().getStamina(),"|");             System.out.printf("%55s %-17s %s %-9s %s \n","|","stamina",":",chooseEnemy.getStamina(),"|");
-//        System.out.printf("%s %-17s %s %-9s %s","|","dexterity",":",heroBuilder.myHero.getDexterity(),"|");         System.out.printf("%55s %-17s %s %-9s %s \n","|","dexterity",":",chooseEnemy.getDexterity(),"|");
-//        System.out.printf("%s %-17s %s %-9s %s","|","intelligence",":",heroBuilder.myHero.getIntelligence(),"|");   System.out.printf("%55s %-17s %s %-9s %s \n","|","intelligence",":", chooseEnemy.getIntelligence(),"|");
-//        System.out.printf("%s %-17s %s %-9s %s","|","wisdom",":",heroBuilder.myHero.getWisdom(),"|");               System.out.printf("%55s %-17s %s %-9s %s \n","|","wisdom",":", chooseEnemy.getWisdom(),"|");
-//        System.out.printf("%s %-17s %s %-9s %s","|","charisma",":",heroBuilder.myHero.getCharisma(),"|");           System.out.printf("%55s %-17s %s %-9s %s \n","|","charisma",":", chooseEnemy.getCharisma(),"|");
-//        System.out.printf("%s %87s", "+ - - - - - FIGHT STATS - - - - +", "+ - - - - - FIGHT STATS - - - - +\n");
-//        System.out.printf("%s %-17s %s %-9s %s","|","base damage",":",heroBuilder.myHero.getStrength(),"|");        System.out.printf("%55s %-17s %s %-9s %s \n","|","base damage",":",chooseEnemy.getStrength(),"|");
-//        System.out.printf("%s %-17s %s %-9s %s","|","base block",":",heroBuilder.myHero.getStamina(),"|");          System.out.printf("%55s %-17s %s %-9s %s \n","|","base block",":",chooseEnemy.getStamina(),"|");
-//        System.out.printf("%s %-17s %s %-9s %s","|","coins",":",heroBuilder.myHero.getDexterity(),"|");             System.out.printf("%55s %-17s %s %-9s %s \n","|","coins",":",chooseEnemy.getDexterity(),"|");
-//        System.out.printf("%s %-17s %s %-9s %s","|","movement speed",":",heroBuilder.myHero.getIntelligence(),"|"); System.out.printf("%55s %-17s %s %-9s %s \n","|","movement speed",":", chooseEnemy.getIntelligence(),"|");
-//        System.out.printf("%s %-17s %s %-9s %s","|","buffs",":",heroBuilder.myHero.getWisdom(),"|");                System.out.printf("%55s %-17s %s %-9s %s \n","|","buffs",":", chooseEnemy.getWisdom(),"|");
-//        System.out.printf("%s %87s", "+ - - - - - - - - - - - - - - - +", "+ - - - - - - - - - - - - - - - +\n");
+        System.out.printf("\n%s %79s", "+ ------------------------------------ +", "+ ------------------------------------ +\n");
+        System.out.printf("|%14sYour HERO%15s|%39s|%12sYour Opponent%13s|\n","","","","","");
+        System.out.printf("%s %-16s %s %-17s %s","|","name",":",Hero.getInstance().getName(),"|");                   System.out.printf("%40s %-16s %s %-17s %s \n","|","name",":",chooseEnemy.getName(),"|");
+        System.out.printf("%s %-16s %s %-17s %s","|","sex",":",Hero.getInstance().getSex(),"|");                     System.out.printf("%40s %-16s %s %-17s %s \n","|","sex",":",chooseEnemy.getSex(),"|");
+        System.out.printf("%s %-16s %s %-17s %s","|","health",":",Hero.getInstance().getHealth(),"|");               System.out.printf("%40s %-16s %s %-17s %s \n","|","health",":",chooseEnemy.getHealth(),"|");
+        System.out.printf("%s %-16s %s %-17s %s","|","mana",":",Hero.getInstance().getMana(),"|");                   System.out.printf("%40s %-16s %s %-17s %s \n","|","mana",":", chooseEnemy.getMana(),"|");
+        System.out.printf("%s %79s", "+ ---------------STATS---------------- +", "+ ---------------STATS---------------- +\n");
+        System.out.printf("%s %-16s %s %-17s %s","|","strength",":",Hero.getInstance().getStrength(),"|");           System.out.printf("%40s %-16s %s %-17s %s \n","|","strength",":",chooseEnemy.getStrength(),"|");
+        System.out.printf("%s %-16s %s %-17s %s","|","stamina",":",Hero.getInstance().getStamina(),"|");             System.out.printf("%40s %-16s %s %-17s %s \n","|","stamina",":",chooseEnemy.getStamina(),"|");
+        System.out.printf("%s %-16s %s %-17s %s","|","dexterity",":",Hero.getInstance().getDexterity(),"|");         System.out.printf("%40s %-16s %s %-17s %s \n","|","dexterity",":",chooseEnemy.getDexterity(),"|");
+        System.out.printf("%s %-16s %s %-17s %s","|","intelligence",":",Hero.getInstance().getIntelligence(),"|");   System.out.printf("%40s %-16s %s %-17s %s \n","|","intelligence",":", chooseEnemy.getIntelligence(),"|");
+        System.out.printf("%s %-16s %s %-17s %s","|","wisdom",":",Hero.getInstance().getWisdom(),"|");               System.out.printf("%40s %-16s %s %-17s %s \n","|","wisdom",":", chooseEnemy.getWisdom(),"|");
+        System.out.printf("%s %-16s %s %-17s %s","|","charisma",":",Hero.getInstance().getCharisma(),"|");           System.out.printf("%40s %-16s %s %-17s %s \n","|","charisma",":", chooseEnemy.getCharisma(),"|");
+        System.out.printf("%s %79s", "+ ------------FIGHT STATS------------- +", "+ ------------FIGHT STATS------------- +\n");
+        System.out.printf("%s %-16s %s %-17s %s","|","base damage",":",Hero.getInstance().getStrength(),"|");        System.out.printf("%40s %-16s %s %-17s %s \n","|","base damage",":",chooseEnemy.getStrength(),"|");
+        System.out.printf("%s %-16s %s %-17s %s","|","base block",":",Hero.getInstance().getStamina(),"|");          System.out.printf("%40s %-16s %s %-17s %s \n","|","base block",":",chooseEnemy.getStamina(),"|");
+        System.out.printf("%s %-16s %s %-17s %s","|","coins",":",Hero.getInstance().getDexterity(),"|");             System.out.printf("%40s %-16s %s %-17s %s \n","|","coins",":",chooseEnemy.getDexterity(),"|");
+        System.out.printf("%s %-16s %s %-17s %s","|","movement speed",":",Hero.getInstance().getIntelligence(),"|"); System.out.printf("%40s %-16s %s %-17s %s \n","|","movement speed",":", chooseEnemy.getIntelligence(),"|");
+        System.out.printf("%s %-16s %s %-17s %s","|","buffs",":",Hero.getInstance().getWisdom(),"|");                System.out.printf("%40s %-16s %s %-17s %s \n","|","buffs",":", chooseEnemy.getWisdom(),"|");
+        System.out.printf("%s %79s", "+ ------------------------------------ +", "+ ------------------------------------ +\n");
     }
 
 
