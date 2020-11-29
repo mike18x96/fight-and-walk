@@ -6,5 +6,6 @@ public class Main {
 	// write your code here
         Board board=new Board();
         board.printBoardWithOutEnemy();
+        board.printBoardWithEnemy();
     }
 }
